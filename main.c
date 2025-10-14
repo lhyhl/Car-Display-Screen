@@ -5,8 +5,8 @@
 #include <unistd.h>
 #include <time.h>
 #include <sys/time.h>
-#include "usrcode/usr_code.h"
-#include "usrcode/time_weather.h"
+#include "usrcode/inc/ui.h"
+#include "usrcode/inc/time_weather.h"
 
 
 #define DISP_BUF_SIZE (800 * 480 / 10)

@@ -2,7 +2,7 @@
 #ifndef USR_CODE_H
 #define USR_CODE_H
 
-#include "../lvgl/lvgl.h"
+#include "../../lvgl/lvgl.h"
 #include <time.h>
 
 // 屏幕尺寸定义

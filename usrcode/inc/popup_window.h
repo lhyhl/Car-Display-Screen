@@ -2,7 +2,7 @@
 #ifndef POPUP_WINDOW_H
 #define POPUP_WINDOW_H
 
-#include "../lvgl/lvgl.h"
+#include "../../lvgl/lvgl.h"
 #include "car_data.h"
 
 // 函数声明

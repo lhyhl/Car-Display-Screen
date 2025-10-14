@@ -2,7 +2,7 @@
 #ifndef TIME_WEATHER_H
 #define TIME_WEATHER_H
 
-#include "../lvgl/lvgl.h"
+#include "../../lvgl/lvgl.h"
 
 // 广告相关
 extern uint8_t ad_index;

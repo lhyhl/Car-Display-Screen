@@ -2,7 +2,7 @@
 #ifndef CAR_DATA_H
 #define CAR_DATA_H
 
-#include "../lvgl/lvgl.h"
+#include "../../lvgl/lvgl.h"
 
 // 图片声明
 LV_IMG_DECLARE(GT500);
