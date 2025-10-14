@@ -1,6 +1,6 @@
 // usrcode/popup_window.c
-#include "popup_window.h"
-#include "ui.h"
+#include "inc/popup_window.h"
+#include "inc/ui.h"
 #include <stdio.h>
 
 /**

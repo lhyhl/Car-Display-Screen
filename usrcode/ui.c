@@ -1,8 +1,8 @@
 // usrcode/usr_code.c
-#include "ui.h"
-#include "car_data.h"
-#include "time_weather.h"
-#include "popup_window.h"
+#include "inc/ui.h"
+#include "inc/car_data.h"
+#include "inc/time_weather.h"
+#include "inc/popup_window.h"
 
 // 全局UI实例定义
 display_ui_t ui;

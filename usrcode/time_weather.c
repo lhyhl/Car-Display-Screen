@@ -1,6 +1,6 @@
 // usrcode/time_weather.c
-#include "time_weather.h"
-#include "ui.h"
+#include "inc/time_weather.h"
+#include "inc/ui.h"
 #include <stdio.h>
 #include <string.h>
 #include <time.h>
