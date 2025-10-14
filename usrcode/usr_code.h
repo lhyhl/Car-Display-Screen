@@ -15,6 +15,11 @@
 #define ACCENT_COLOR       lv_color_hex(0xe94560)
 #define SECONDARY_COLOR    lv_color_hex(0x0f3460)
 
+// 定义统一的尺寸和间距
+#define BOX_WIDTH 220      // 文本框宽度
+#define BOX_HEIGHT 80      // 文本框高度
+#define BOX_SPACING 15     // 文本框间距
+#define BOX_START_Y -110   // 起始Y坐标
 // 字体声明
 LV_FONT_DECLARE(chinese_ziku);
 LV_FONT_DECLARE(lv_font_source_han_sans_bold_20);
