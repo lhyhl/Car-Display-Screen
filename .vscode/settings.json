@@ -1,5 +1,10 @@
 {
     "files.associations": {
-        "usr_code.h": "c"
+        "usr_code.h": "c",
+        "popup_window.h": "c",
+        "time_weather.h": "c",
+        "ui.h": "c",
+        "string.h": "c",
+        "stdio.h": "c"
     }
 }
