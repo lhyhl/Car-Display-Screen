@@ -40,22 +40,19 @@ void update_time(lv_obj_t *time_label)
         return;  // 退出函数
     }
 
-    // 中文星期数组，用于将数字星期转换为中文显示
-    const char *weekdays[] = {"日", "一", "二", "三", "四", "五", "六"};
     
     // 格式化时间字符串：
     // %02d:%02d:%02d        → 时:分:秒（两位数，不足补零）
     // %04d年%02d月%02d日    → 年-月-日（四位数年份，两位数月份和日期）
-    // 星期%s                → 星期几（使用中文星期数组）
     snprintf(display_str, sizeof(display_str), 
-             "%02d:%02d:%02d\n%04d年%02d月%02d日 星期%s", 
+             "%02d:%02d:%02d\n%04d年%02d月%02d日", 
              t->tm_hour,      // 小时（0-23）
              t->tm_min,       // 分钟（0-59）
              t->tm_sec,       // 秒（0-59）
              t->tm_year + 1900, // 年份（tm_year是从1900年开始的偏移量）
              t->tm_mon + 1,   // 月份（0-11，所以需要+1）
-             t->tm_mday,      // 日期（1-31）
-             weekdays[t->tm_wday]);  // 星期几（0-6，对应星期日到星期六）
+             t->tm_mday       // 日期（1-31）
+                    );  
 
     // 将格式化后的时间字符串设置到LVGL标签
     lv_label_set_text(time_label, display_str);
