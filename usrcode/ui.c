@@ -42,7 +42,7 @@ void create_ui(display_ui_t * ui)
     // ==================== 天气显示 ====================
     // 创建天气显示标签
     ui->weather_label = lv_label_create(ui->screen);
-    lv_label_set_text(ui->weather_label, "加载中...");               // 初始显示文本
+    lv_label_set_text(ui->weather_label, "28度 多云");               // 初始显示文本
     lv_obj_set_style_text_font(ui->weather_label, &chinese_ziku, 0); // 设置中文字体
     lv_obj_set_style_text_color(ui->weather_label, TEXT_COLOR, 0);   // 设置文本颜色
     lv_obj_set_style_bg_opa(ui->weather_label, LV_OPA_0, 0);         // 设置背景透明

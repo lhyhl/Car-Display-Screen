@@ -1,33 +1,32 @@
-// usrcode/car_data.h
 #ifndef CAR_DATA_H
 #define CAR_DATA_H
 
 #include "../../lvgl/lvgl.h"
 
-// 图片声明
-LV_IMG_DECLARE(GT500);
-LV_IMG_DECLARE(Mercedes);
-LV_IMG_DECLARE(RollsRoyceHurricane);
-LV_IMG_DECLARE(left);
-LV_IMG_DECLARE(right);
+// 图片声明 - 使用LVGL宏声明嵌入式图片资源
+LV_IMG_DECLARE(GT500);                    // 声明福特GT500图片
+LV_IMG_DECLARE(Mercedes);                 // 声明奔驰汽车图片  
+LV_IMG_DECLARE(RollsRoyceHurricane);      // 声明劳斯莱斯图片
+LV_IMG_DECLARE(left);                     // 声明向左箭头图片
+LV_IMG_DECLARE(right);                    // 声明向右箭头图片
 
-// 汽车信息结构
+// 汽车信息结构体 - 用于存储每款汽车的完整展示信息
 typedef struct {
-    const char *name;
-    const lv_img_dsc_t *image;
-    const char *description;
-    const char *announcement;
-    const char *discount_info;
-    const char *gift_info;
+    const char *name;              // 汽车型号名称
+    const lv_img_dsc_t *image;     // 指向LVGL图片描述符的指针
+    const char *description;       // 汽车详细描述信息
+    const char *announcement;      // 官方公告或新闻
+    const char *discount_info;     // 折扣优惠信息
+    const char *gift_info;         // 赠品信息
 } car_info_t;
 
-// 外部声明
-extern car_info_t cars[];
-extern const int car_count;
-extern int current_car_index;
+// 外部变量声明 - 这些变量在car_data.c中定义
+extern car_info_t cars[];          // 汽车信息数组，包含所有车型数据
+extern const int car_count;        // 汽车总数，用于数组边界检查
+extern int current_car_index;      // 当前显示的汽车索引，用于轮播控制
 
-// 函数声明
-void update_car_display(void);
-void update_announcement_info(void);
+// 函数声明 - 界面更新相关功能
+void update_car_display(void);     // 更新主汽车显示（图片、名称、描述等）
+void update_announcement_info(void); // 更新公告和优惠信息显示
 
 #endif
