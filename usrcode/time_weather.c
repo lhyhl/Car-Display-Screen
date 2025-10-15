@@ -88,11 +88,11 @@ void update_weather(lv_obj_t *weather_label)
 
     // 根据小时计算天气索引，实现天气随时间变化：
     // 每6小时切换一次天气类型，总共4种天气类型循环
-    int weather_index = (t->tm_hour / 6) % 4;
+    int weather_index = (t->tm_min / 6) % 4;
     
     // 模拟温度变化：基础温度20度 + 小时数的个位数
     // 这样温度会在20-29度之间变化
-    int temp = 20 + (t->tm_hour % 10);
+    int temp = 20 + (t->tm_min % 10);
 
     // 格式化天气字符串
     char weather_str[30];

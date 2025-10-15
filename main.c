@@ -13,12 +13,11 @@
 
 int main(void)
 {
-    // 初始化系统时间（如果需要）
+    // 初始化系统时间
     struct timeval tv;
 
     if(gettimeofday(&tv, NULL) == 0) { // 第二个参数传 NULL
         printf("系统时间初始化成功\n");
-        printf("当前时间戳: %ld\n", tv.tv_sec);
     } else {
         printf("系统时间初始化失败\n");
     }
@@ -56,11 +55,11 @@ int main(void)
     indev_drv_1.read_cb      = evdev_read;
     lv_indev_t * mouse_indev = lv_indev_drv_register(&indev_drv_1);
 
-    /* 设置鼠标指针图标 */
-    LV_IMG_DECLARE(mouse_cursor_icon)
-    lv_obj_t * cursor_obj = lv_img_create(lv_scr_act());
-    lv_img_set_src(cursor_obj, &mouse_cursor_icon);
-    lv_indev_set_cursor(mouse_indev, cursor_obj);
+    // /* 设置鼠标指针图标 */
+    // LV_IMG_DECLARE(mouse_cursor_icon)
+    // lv_obj_t * cursor_obj = lv_img_create(lv_scr_act());
+    // lv_img_set_src(cursor_obj, &mouse_cursor_icon);
+    // lv_indev_set_cursor(mouse_indev, cursor_obj);
 
     // 创建主屏幕
     ui.screen = lv_scr_act();
@@ -73,7 +72,7 @@ int main(void)
     // main.c - 在创建定时器部分
     lv_timer_t * timer         = lv_timer_create(timer_callback, 1000, NULL);         // 1秒更新时间
     lv_timer_t * ad_timer      = lv_timer_create(ad_timer_callback, 5000, NULL);      // 5秒轮播广告
-    lv_timer_t * weather_timer = lv_timer_create(weather_timer_callback, 8000, NULL); // 30秒更新天气  // 10秒更新天气
+    lv_timer_t * weather_timer = lv_timer_create(weather_timer_callback, 5000, NULL); // 5秒更新天气  // 10秒更新天气
     /* LVGL 主循环 */
     while(1) {
         lv_timer_handler();
