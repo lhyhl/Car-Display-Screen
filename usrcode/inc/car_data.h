@@ -3,14 +3,14 @@
 
 #include "../../lvgl/lvgl.h"
 
-// 图片声明 - 使用LVGL宏声明嵌入式图片资源
+// 图片声明
 LV_IMG_DECLARE(GT500);                    // 声明福特GT500图片
 LV_IMG_DECLARE(Mercedes);                 // 声明奔驰汽车图片  
 LV_IMG_DECLARE(RollsRoyceHurricane);      // 声明劳斯莱斯图片
 LV_IMG_DECLARE(left);                     // 声明向左箭头图片
 LV_IMG_DECLARE(right);                    // 声明向右箭头图片
 
-// 汽车信息结构体 - 用于存储每款汽车的完整展示信息
+// 汽车信息结构体
 typedef struct {
     const char *name;              // 汽车型号名称
     const lv_img_dsc_t *image;     // 指向LVGL图片描述符的指针

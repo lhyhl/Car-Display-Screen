@@ -24,7 +24,7 @@ void update_time(lv_obj_t *time_label)
 {
     static char display_str[100];  // 静态字符数组，用于存储格式化后的时间字符串
     
-    // 获取当前系统时间（从1970年1月1日至今的秒数）
+    // 获取当前系统时间
     time_t now = time(NULL);
     
     // 检查时间获取是否失败（time函数返回-1表示失败）
@@ -42,8 +42,8 @@ void update_time(lv_obj_t *time_label)
 
     
     // 格式化时间字符串：
-    // %02d:%02d:%02d        → 时:分:秒（两位数，不足补零）
-    // %04d年%02d月%02d日    → 年-月-日（四位数年份，两位数月份和日期）
+    // %02d:%02d:%02d        
+    // %04d年%02d月%02d日    
     snprintf(display_str, sizeof(display_str), 
              "%02d:%02d:%02d\n%04d年%02d月%02d日", 
              t->tm_hour,      // 小时（0-23）

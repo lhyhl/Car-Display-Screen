@@ -65,7 +65,7 @@ void create_ui(display_ui_t * ui)
 
     // 公告标签
     ui->announcement_label = lv_label_create(announcement_container);
-    lv_label_set_text(ui->announcement_label, "赛道版限量发售,仅剩5台");          // 公告内容
+    lv_label_set_text(ui->announcement_label, "赛道版限量发售,仅剩5台");           // 公告内容
     lv_obj_set_style_text_font(ui->announcement_label, &chinese_ziku, 0);         // 中文字体
     lv_obj_set_style_text_color(ui->announcement_label, TEXT_COLOR, 0);           // 文本颜色
     lv_obj_set_style_text_align(ui->announcement_label, LV_TEXT_ALIGN_CENTER, 0); // 文本居中
@@ -84,7 +84,7 @@ void create_ui(display_ui_t * ui)
 
     // 优惠信息标签
     ui->discount_label = lv_label_create(discount_container);
-    lv_label_set_text(ui->discount_label, "首付30%,享3年免息");              // 优惠内容（%%表示转义%字符）
+    lv_label_set_text(ui->discount_label, "首付30%,享3年免息");                // 优惠内容
     lv_obj_set_style_text_font(ui->discount_label, &chinese_ziku, 0);         // 中文字体
     lv_obj_set_style_text_color(ui->discount_label, TEXT_COLOR, 0);           // 文本颜色
     lv_obj_set_style_text_align(ui->discount_label, LV_TEXT_ALIGN_CENTER, 0); // 文本居中
@@ -103,7 +103,7 @@ void create_ui(display_ui_t * ui)
 
     // 礼品信息标签
     ui->gift_label = lv_label_create(gift_container);
-    lv_label_set_text(ui->gift_label, "赠送专业赛道驾驶培训");            // 礼品内容
+    lv_label_set_text(ui->gift_label, "赠送专业赛道驾驶培训");              // 礼品内容
     lv_obj_set_style_text_font(ui->gift_label, &chinese_ziku, 0);         // 中文字体
     lv_obj_set_style_text_color(ui->gift_label, TEXT_COLOR, 0);           // 文本颜色
     lv_obj_set_style_text_align(ui->gift_label, LV_TEXT_ALIGN_CENTER, 0); // 文本居中
