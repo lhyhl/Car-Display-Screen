@@ -83,6 +83,7 @@ int main(void)
 }
 
 /* 系统 Tick 获取函数 */
+//自定义的系统时间戳获取函数
 uint32_t custom_tick_get(void)
 {
     static uint64_t start_ms = 0;

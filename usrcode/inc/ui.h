@@ -10,10 +10,10 @@
 #define SCREEN_HEIGHT 480
 
 // 颜色定义
-#define BG_COLOR           lv_color_hex(0x1a1a2e)
-#define TEXT_COLOR         lv_color_hex(0xffffff)
-#define ACCENT_COLOR       lv_color_hex(0xe94560)
-#define SECONDARY_COLOR    lv_color_hex(0x0f3460)
+#define BG_COLOR           lv_color_hex(0x1a1a2e)   //深蓝色
+#define TEXT_COLOR         lv_color_hex(0xffffff)   //纯白色
+#define ACCENT_COLOR       lv_color_hex(0xe94560)   //鲜红色
+#define SECONDARY_COLOR    lv_color_hex(0x0f3460)   //中蓝色
 
 // 定义统一的尺寸和间距
 #define BOX_WIDTH 220      // 文本框宽度
