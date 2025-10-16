@@ -9,7 +9,7 @@ LV_IMG_DECLARE(left);                     // 声明向左箭头图片
 LV_IMG_DECLARE(right);                    // 声明向右箭头图片
 LV_IMG_DECLARE(Porsche911GT3);            // 声明保时捷911GT3图片
 LV_IMG_DECLARE(McLaren600LT);             // 声明迈凯伦600LT图片  
-LV_IMG_DECLARE(Ferrari812);               //声明法拉利812图片  
+LV_IMG_DECLARE(Ferrari812);               // 声明法拉利812图片  
 
 
 

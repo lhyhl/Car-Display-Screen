@@ -67,8 +67,8 @@ void show_car_detail_popup(int car_index)
     lv_obj_set_style_text_color(desc, TEXT_COLOR, 0);  // 文本颜色
     lv_obj_set_style_text_align(desc, LV_TEXT_ALIGN_LEFT, 0);  // 文本左对齐
     lv_obj_set_style_text_letter_space(desc, 1, 0);  // 字符间距1像素
-    lv_obj_set_style_text_line_space(desc, 8, 0);  // 行间距8像素（提高可读性）
-    lv_obj_set_width(desc, 580);  // 设置文本宽度为580像素（避免贴边）
+    lv_obj_set_style_text_line_space(desc, 8, 0);  // 行间距8像素
+    lv_obj_set_width(desc, 580);  // 设置文本宽度为580像素
     lv_obj_align(desc, LV_ALIGN_TOP_MID, 0, 15);  // 对齐到容器顶部中间，Y轴偏移15像素
 
     // ==================== 关闭按钮 ====================

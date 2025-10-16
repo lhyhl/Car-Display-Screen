@@ -35,7 +35,7 @@ void create_ui(display_ui_t * ui)
     ui->time_label = lv_label_create(ui->screen);
     lv_label_set_text(ui->time_label, "加载中...");                      // 初始显示文本
     lv_obj_set_style_text_font(ui->time_label, &chinese_ziku, 0);        // 设置中文字体
-    lv_obj_set_style_text_color(ui->time_label, TEXT_COLOR, 0);          // 设置文本颜色
+    lv_obj_set_style_text_color(ui->time_label, RED_COLOR, 0);          // 设置文本颜色
     lv_obj_set_style_bg_opa(ui->time_label, LV_OPA_0, 0);                // 设置背景透明度为0（完全透明）
     lv_obj_set_style_text_align(ui->time_label, LV_TEXT_ALIGN_RIGHT, 0); // 设置文本向右对齐
     lv_obj_align(ui->time_label, LV_ALIGN_TOP_RIGHT, -15, 10);           // 对齐到右上角

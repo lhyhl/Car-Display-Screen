@@ -13,19 +13,19 @@
 
 int main(void)
 {
-    // 初始化系统时间
-    struct timeval tv;
+    // // 初始化系统时间
+    // struct timeval tv;
 
-    if(gettimeofday(&tv, NULL) == 0) { // 第二个参数传 NULL
-        printf("系统时间初始化成功\n");
-    } else {
-        printf("系统时间初始化失败\n");
-    }
+    // if(gettimeofday(&tv, NULL) == 0) { // 第二个参数传 NULL
+    //     printf("系统时间初始化成功\n");
+    // } else {
+    //     printf("系统时间初始化失败\n");
+    // }
 
-    // 设置时区
-    setenv("TZ", "CST-8", 1); // 设置为中国标准时间
-    //根据 TZ 环境变量重新初始化时区转换信息，使时区设置生效
-    tzset();
+    // // 设置时区
+    // setenv("TZ", "CST-8", 1); // 设置为中国标准时间
+    // //根据 TZ 环境变量重新初始化时区转换信息，使时区设置生效
+    // tzset();
     /* 初始化 LVGL 核心库 */
     lv_init();
 

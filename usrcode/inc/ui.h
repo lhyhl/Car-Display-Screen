@@ -14,6 +14,7 @@
 #define TEXT_COLOR         lv_color_hex(0xffffff)   //纯白色
 #define ACCENT_COLOR       lv_color_hex(0xe94560)   //鲜红色
 #define SECONDARY_COLOR    lv_color_hex(0x0f3460)   //中蓝色
+#define RED_COLOR          lv_color_hex(0xff0000)   //红色
 
 // 定义统一的尺寸和间距
 #define BOX_WIDTH 220      // 文本框宽度
