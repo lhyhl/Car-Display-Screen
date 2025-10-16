@@ -37,7 +37,7 @@ void show_car_detail_popup(int car_index)
     lv_obj_t *title = lv_label_create(title_container);
     char title_text[50];  // 缓冲区用于存储格式化后的标题文本
     // 格式化标题文本：汽车图标 + 汽车名称 + "详细配置"
-    snprintf(title_text, sizeof(title_text), "🚗 %s 详细配置", cars[car_index].name);
+    snprintf(title_text, sizeof(title_text), "%s 详细配置", cars[car_index].name);
     lv_label_set_text(title, title_text);  // 设置标题文本
     lv_obj_set_style_text_font(title, &chinese_ziku, 0);  // 使用中文字体
     lv_obj_set_style_text_color(title, TEXT_COLOR, 0);  // 设置文本颜色

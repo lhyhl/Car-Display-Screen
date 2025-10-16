@@ -24,6 +24,7 @@ int main(void)
 
     // 设置时区
     setenv("TZ", "CST-8", 1); // 设置为中国标准时间
+    //根据 TZ 环境变量重新初始化时区转换信息，使时区设置生效
     tzset();
     /* 初始化 LVGL 核心库 */
     lv_init();
@@ -35,17 +36,17 @@ int main(void)
     static lv_color_t buf[DISP_BUF_SIZE];
 
     /* 初始化显示缓冲区描述符 */
-    static lv_disp_draw_buf_t disp_buf;
-    lv_disp_draw_buf_init(&disp_buf, buf, NULL, DISP_BUF_SIZE);
+    static lv_disp_draw_buf_t disp_buf; //声明一个显示缓冲区描述符结构体
+    lv_disp_draw_buf_init(&disp_buf, buf, NULL, DISP_BUF_SIZE);//初始化显示缓冲区：配置LVGL的绘图缓冲区
 
     /* 初始化并注册显示驱动 */
     static lv_disp_drv_t disp_drv;
-    lv_disp_drv_init(&disp_drv);
+    lv_disp_drv_init(&disp_drv);    // 设置绘图缓冲区
     disp_drv.draw_buf = &disp_buf;
-    disp_drv.flush_cb = fbdev_flush;
-    disp_drv.hor_res  = 800;
-    disp_drv.ver_res  = 480;
-    lv_disp_drv_register(&disp_drv);
+    disp_drv.flush_cb = fbdev_flush;// 设置刷新回调函数
+    disp_drv.hor_res  = 800;        // 设置水平分辨率
+    disp_drv.ver_res  = 480;        // 设置垂直分辨率
+    lv_disp_drv_register(&disp_drv);//将配置好的驱动注册到LVGL系统中
 
     /* 初始化输入设备 */
     evdev_init();
@@ -54,12 +55,6 @@ int main(void)
     indev_drv_1.type         = LV_INDEV_TYPE_POINTER;
     indev_drv_1.read_cb      = evdev_read;
     lv_indev_t * mouse_indev = lv_indev_drv_register(&indev_drv_1);
-
-    // /* 设置鼠标指针图标 */
-    // LV_IMG_DECLARE(mouse_cursor_icon)
-    // lv_obj_t * cursor_obj = lv_img_create(lv_scr_act());
-    // lv_img_set_src(cursor_obj, &mouse_cursor_icon);
-    // lv_indev_set_cursor(mouse_indev, cursor_obj);
 
     // 创建主屏幕
     ui.screen = lv_scr_act();
