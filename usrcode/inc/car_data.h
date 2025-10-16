@@ -4,11 +4,14 @@
 #include "../../lvgl/lvgl.h"
 
 // 图片声明
-LV_IMG_DECLARE(GT500);                    // 声明福特GT500图片
-LV_IMG_DECLARE(Mercedes);                 // 声明奔驰汽车图片  
-LV_IMG_DECLARE(RollsRoyceHurricane);      // 声明劳斯莱斯图片
+
 LV_IMG_DECLARE(left);                     // 声明向左箭头图片
 LV_IMG_DECLARE(right);                    // 声明向右箭头图片
+LV_IMG_DECLARE(Porsche911GT3);            // 声明保时捷911GT3图片
+LV_IMG_DECLARE(McLaren600LT);             // 声明迈凯伦600LT图片  
+LV_IMG_DECLARE(Ferrari812);               //声明法拉利812图片  
+
+
 
 // 汽车信息结构体
 typedef struct {

@@ -9,7 +9,7 @@
 #include "usrcode/inc/time_weather.h"
 
 
-#define DISP_BUF_SIZE (800 * 480 / 10)
+#define DISP_BUF_SIZE (800 * 480 )
 
 int main(void)
 {
